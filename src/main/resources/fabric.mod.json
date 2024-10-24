@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ip-locator",
+	"version": "${version}",
+	"name": "IP Locator",
+	"description": "Pastes a link in chat to an IP Lookup service whenever an IP is detected in chat.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ip-locator/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.colserra.iplocator.IPLocator"
+		],
+		"client": [
+			"net.colserra.iplocator.IPLocatorClient"
+		],
+		"fabric-datagen": [
+			"net.colserra.iplocator.IPLocatorDataGenerator"
+		]
+	},
+	"mixins": [
+		"ip-locator.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
